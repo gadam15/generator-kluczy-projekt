@@ -1,0 +1,6 @@
+pip install -r requirements.txt
+python klucze.py server
+
+python klucze.py generate
+python klucze.py sign ID_KLUCZA "Wiadomosc testowa"
+python klucze.py verify KLUCZ_PUBLICZNY "Wiadomosc testowa" PODPIS
