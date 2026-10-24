@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const PRODUCTS = [
   { id: "g1", name: "Stardew Valley", category: "Indie · Symulacja", price: 39.99, emoji: "🌱", color: "#d8f3dc" },
