@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const PRODUCTS = [
   { id: "g1", name: "Stardew Valley", category: "Indie · Symulacja", price: 39.99, emoji: "🌱", color: "#d8f3dc" },
@@ -69,7 +69,7 @@ export default function App() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Nie udało się wysłać zamówienia.");
-      setNotice(`Zamówienie ${data.orderId.slice(0, 8)} wysłano do kolejki. To demonstracja — nie pobrano płatności.`);
+      setNotice(`Zamówienie ${data.orderId.slice(0, 8)} wysłano do RabbitMQ. To demonstracja — nie pobrano płatności.`);
       setCart([]);
     } catch (err) { setNotice(`${err.message} Upewnij się, że działa backend i RabbitMQ.`); }
     finally { setBusy(false); }
