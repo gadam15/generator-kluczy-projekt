@@ -1,0 +1,15 @@
+{
+  "name": "sklep-klucze-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "worker": "node worker.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
